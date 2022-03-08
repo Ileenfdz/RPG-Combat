@@ -24,22 +24,26 @@ Instructions
 
 Iteration One
     1. All Characters, when created, have:
-        ◦ Health, starting at 1000
-        ◦ Level, starting at 1
-        ◦ May be Alive or Dead, starting Alive (Alive may be a true/false)
+        ◦ Health, starting at 1000  ~YES~
+        ◦ Level, starting at 1 ~YES~
+        ◦ May be Alive or Dead, starting Alive (Alive may be a true/false) ~YES~
     2. Characters can Deal Damage to Characters.
-        ◦ Damage is subtracted from Health
-        ◦ When damage received exceeds current Health, Health becomes 0 and the character dies
+        ◦ Damage is subtracted from Health ~YES~
+        ◦ When damage received exceeds current Health, Health becomes 0 and the character dies ~YES~
     3. A Character can Heal a Character.
-        ◦ Dead characters cannot be healed
-        ◦ Healing cannot raise health above 1000
+        ◦ Dead characters cannot be healed ~YES~
+        ◦ Healing cannot raise health above 1000 ~YES~
+
+~ Interaction One DONEEE ~
 
 Iteration Two
-    1. A Character cannot Deal Damage to itself.
-    2. A Character can only Heal itself.
+    1. A Character cannot Deal Damage to itself. ~YES~
+    2. A Character can only Heal itself. ~YES~ (Have also the method if in the future you can heal others)
     3. When dealing damage:
-        ◦ If the target is 5 or more Levels above the attacker, Damage is reduced by 50%
-        ◦ If the target is 5 or more levels below the attacker, Damage is increased by 50%
+        ◦ If the target is 5 or more Levels above the attacker, Damage is reduced by 50% ~YES~
+        ◦ If the target is 5 or more levels below the attacker, Damage is increased by 50% ~YES~
+
+~ Interaction Two DONEEE ~    
 
 Iteration Three
     1. Characters have an attack Max Range.
