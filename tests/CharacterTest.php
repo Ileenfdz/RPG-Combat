@@ -197,4 +197,137 @@ class CharacterTest extends TestCase
         //Then
 		$this->assertEquals($healthExpected, $character1->health);
 	}
+
+	public function test_character_type_melee(){
+		//Given
+		$character = new Character();
+		$typeExpected = 'melee';
+        //When
+		$character->getType('melee');
+        //Then
+		$this->assertEquals($typeExpected, $character->type);
+	}
+
+	public function test_character_type_ranged(){
+		//Given
+		$character = new Character();
+		$typeExpected = 'ranged';
+        //When
+		$character->getType('ranged');
+        //Then
+		$this->assertEquals($typeExpected, $character->type);
+	}
+
+	public function test_character_range_melee(){
+		//Given
+		$character = new Character();
+		$rangeExpected = 2;
+        //When
+		$character->getType('melee');
+		$character->getRange($character);
+        //Then
+		$this->assertEquals($rangeExpected, $character->range);
+	}
+
+	public function character_range_ranged(){
+		//Given
+		$character = new Character();
+		$rangeExpected = 20;
+        //When
+		$character->getType('ranged');
+		$character->getRange($character);
+        //Then
+		$this->assertEquals($rangeExpected, $character->range);
+	}
+
+	public function test_out_of_range_damage_melee(){
+		//Given
+		$character1 = new Character();
+		$character2 = new Character();
+		$healthExpected = 1000;
+		//When
+		$character2->getDamage(200);
+		$character2->getType('melee');
+		$character2->getRange($character2);
+		$character2->range = 5;
+		$character1->doDamage($character1, $character2);
+		//Then
+		$this->assertEquals($healthExpected, $character1->health);
+	}
+
+	public function test_in_range_damage_melee(){
+		//Given
+		$character1 = new Character();
+		$character2 = new Character();
+		$healthExpected = 700;
+		//When
+		$character2->getDamage(200);
+		$character2->getType('melee');
+		$character2->getRange($character2);
+		$character2->range = 1;
+		$character1->doDamage($character1, $character2);
+		//Then
+		$this->assertEquals($healthExpected, $character1->health);
+	}
+
+	public function test_out_of_range_damage_ranged(){
+		//Given
+		$character1 = new Character();
+		$character2 = new Character();
+		$healthExpected = 1000;
+		//When
+		$character2->getDamage(200);
+		$character2->getType('ranged');
+		$character2->getRange($character2);
+		$character2->range = 25;
+		$character1->doDamageWMessage($character1, $character2);
+		//Then
+		$this->assertEquals($healthExpected, $character1->health);
+	}
+
+	public function test_in_range_damage_ranged(){
+		//Given
+		$character1 = new Character();
+		$character2 = new Character();
+		$healthExpected = 700;
+		//When
+		$character2->getDamage(200);
+		$character2->getType('ranged');
+		$character2->getRange($character2);
+		$character2->range = 17;
+		$character1->doDamageWMessage($character1, $character2);
+		//Then
+		$this->assertEquals($healthExpected, $character1->health);
+	}
+
+	public function test_out_of_range_message(){
+		//Given
+		$character1 = new Character();
+		$character2 = new Character();
+		$messageExpected = 'Out of range';
+		//When
+		$character2->getDamage(200);
+		$character2->getType('ranged');
+		$character2->getRange($character2);
+		$character2->range = 25;
+		$character1->doDamageWMessage($character1, $character2);
+		//Then
+		$this->assertEquals($messageExpected, $character1->message);
+	}
+
+	public function test_in_range_message(){
+		//Given
+		$character1 = new Character();
+		$character2 = new Character();
+		$messageExpected = 'In range';
+		//When
+		$character2->getDamage(200);
+		$character2->getType('ranged');
+		$character2->getRange($character2);
+		$character2->range = 20;
+		$character1->doDamageWMessage($character1, $character2);
+		//Then
+		$this->assertEquals($messageExpected, $character1->message);
+	}
+
 }

@@ -46,10 +46,10 @@ Iteration Two
 ~ Interaction Two DONEEE ~    
 
 Iteration Three
-    1. Characters have an attack Max Range.
-    2. Melee fighters have a range of 2 meters.
-    3. Ranged fighters have a range of 20 meters.
-    4. Characters must be in range to deal damage to a target.
+    1. Characters have an attack Max Range. ~YES~
+    2. Melee fighters have a range of 2 meters. ~YES~
+    3. Ranged fighters have a range of 20 meters. ~YES~
+    4. Characters must be in range to deal damage to a target. ~YES~
 
 Retrospective
     • Are you keeping up with the requirements? Has any iteration been a big challenge?
