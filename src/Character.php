@@ -11,6 +11,7 @@ class Character{
     public $heal;
     public $type;
     public $range;
+    public array $faction;
 
     public $message;
 
@@ -18,7 +19,7 @@ class Character{
         $this->health = 1000;
         $this->level = 1;
         $this->alive = true;
-        $this->message = '';
+        $this->faction = [''];
     }
 
     public function getHealth(){
@@ -44,6 +45,11 @@ class Character{
     public function getType($type){ 
         return $this->type = $type;
     }
+
+    public function getFaction(){ 
+        return $this->faction;
+    }
+
 
     public function getRange($char){
         if($char->type == 'melee'){
@@ -161,4 +167,5 @@ class Character{
 
         return $this->health = $charHealth;
     }
+
 }

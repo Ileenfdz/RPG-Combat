@@ -24,32 +24,33 @@ Instructions
 
 Iteration One
     1. All Characters, when created, have:
-        ◦ Health, starting at 1000  ~YES~
-        ◦ Level, starting at 1 ~YES~
-        ◦ May be Alive or Dead, starting Alive (Alive may be a true/false) ~YES~
+        ◦ Health, starting at 1000  ~ YES ~
+        ◦ Level, starting at 1 ~ YES ~
+        ◦ May be Alive or Dead, starting Alive (Alive may be a true/false) 
+        ~ YES ~
     2. Characters can Deal Damage to Characters.
-        ◦ Damage is subtracted from Health ~YES~
-        ◦ When damage received exceeds current Health, Health becomes 0 and the character dies ~YES~
+        ◦ Damage is subtracted from Health ~ YES ~
+        ◦ When damage received exceeds current Health, Health becomes 0 and the character dies ~ YES ~
     3. A Character can Heal a Character.
-        ◦ Dead characters cannot be healed ~YES~
-        ◦ Healing cannot raise health above 1000 ~YES~
+        ◦ Dead characters cannot be healed ~ YES ~
+        ◦ Healing cannot raise health above 1000 ~ YES ~
 
 ~ Interaction One DONEEE ~
 
 Iteration Two
-    1. A Character cannot Deal Damage to itself. ~YES~
-    2. A Character can only Heal itself. ~YES~ (Have also the method if in the future you can heal others)
+    1. A Character cannot Deal Damage to itself. ~ YES ~
+    2. A Character can only Heal itself. ~ YES ~ (Have also the method if in the future you can heal others)
     3. When dealing damage:
-        ◦ If the target is 5 or more Levels above the attacker, Damage is reduced by 50% ~YES~
-        ◦ If the target is 5 or more levels below the attacker, Damage is increased by 50% ~YES~
+        ◦ If the target is 5 or more Levels above the attacker, Damage is reduced by 50% ~ YES ~
+        ◦ If the target is 5 or more levels below the attacker, Damage is increased by 50% ~ YES ~
 
 ~ Interaction Two DONEEE ~    
 
 Iteration Three
     1. Characters have an attack Max Range. ~YES~
-    2. Melee fighters have a range of 2 meters. ~YES~
-    3. Ranged fighters have a range of 20 meters. ~YES~
-    4. Characters must be in range to deal damage to a target. ~YES~
+    2. Melee fighters have a range of 2 meters. ~ YES ~
+    3. Ranged fighters have a range of 20 meters. ~ YES ~
+    4. Characters must be in range to deal damage to a target. ~ YES ~
 
 Retrospective
     • Are you keeping up with the requirements? Has any iteration been a big challenge?
@@ -58,7 +59,7 @@ Retrospective
 
 Iteration Four
     1. Characters may belong to one or more Factions.
-        ◦ Newly created Characters belong to no Faction.
+        ◦ Newly created Characters belong to no Faction. ~ YES ~
     2. A Character may Join or Leave one or more Factions.
     3. Players belonging to the same Faction are considered Allies.
     4. Allies cannot Deal Damage to one another.

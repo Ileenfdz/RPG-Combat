@@ -330,4 +330,14 @@ class CharacterTest extends TestCase
 		$this->assertEquals($messageExpected, $character1->message);
 	}
 
+	// public function join_a_faction(){
+	// 	//Given
+	// 	$character = new Character();
+	// 	$factionExpected = ['Creeds'];
+	// 	//When
+	// 	$character->joinFaction('Souls');
+	// 	//Then
+	// 	$this->assertEquals($factionExpected, $character->faction);
+	// }
+
 }
